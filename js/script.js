@@ -47,7 +47,7 @@ function changeBackground() {
     index = 0;
   }
 
-  background.style.backgroundImage = `url('../img/${backgrounds[index]}')`;
+  background.style.backgroundImage = `url('./img/${backgrounds[index]}')`;
   background.classList.add("active");
 
   setTimeout(() => {
