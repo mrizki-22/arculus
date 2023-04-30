@@ -52,9 +52,30 @@ function changeBackground() {
 
   setTimeout(() => {
     background.classList.remove("active");
-  }, 4500);
+  }, 4700);
 }
 
 changeBackground();
 
 setInterval(changeBackground, 5000);
+
+var myButton = document.getElementById("back-to-top-btn");
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 20) {
+    myButton.style.display = "block";
+  } else {
+    myButton.style.display = "none";
+  }
+}
+
+myButton.onclick = function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
